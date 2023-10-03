@@ -354,4 +354,29 @@ section#contact {
     top: 0.5rem;
     right: 1rem;
   }
+
+  .container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .about-info-container {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    padding: 0;
+    overflow: auto;
+  }
+
+
+  .about-image-container img{
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .about-info-container p {
+    font-size: 400;
+    text-align: left;
+  }
+
 }
