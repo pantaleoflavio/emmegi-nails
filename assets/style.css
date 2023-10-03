@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Pacifico&display=swap');
 
-
 :root {
   --primaryColor: #fff;
   --navColor1: #21292c;
@@ -18,8 +17,17 @@ html {
 body {
   margin: 0;
   background: var(--navColor1);
-
 }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    background-color: var(--navColor5);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--navColor5); /* Colore del track */
+  }
 
 /* --- Navigation Menu ------------------------------ */
 
@@ -264,8 +272,11 @@ section#home a {
   font-family: 'Dancing Script', cursive;
 }
 
+/* Background Music*/
+
 #background-music{
   position: absolute;
+  opacity: 0.5;
   z-index: 2;
   bottom: 1.5rem;
   left: 1.5rem;
@@ -275,6 +286,15 @@ section#home a {
   width: 150px;
   height: 25px;
 }
+
+#background-music::-moz-media-controls-download-button {
+  display: none;
+}
+
+#background-music::-ms-media-controls-download-button {
+  display: none;
+}
+
 
 /* About */
 
@@ -386,6 +406,7 @@ section#contact {
 
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 768px) {
+
   section#home a {
     top: 1rem;
     left: 1rem;

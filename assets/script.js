@@ -9,6 +9,11 @@ const navItems = [nav1, nav2, nav3, nav4, nav5];
 
 let slideIndex  = 0;
 
+const soundtrack = document.getElementById("background-music");
+
+// Reducing music volume
+soundtrack.volume = 0.01;
+
 // Background automatic slider
 function slider() {
   let i;
