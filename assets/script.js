@@ -7,7 +7,14 @@ const nav4 = document.getElementById('nav-4');
 const nav5 = document.getElementById('nav-5');
 const navItems = [nav1, nav2, nav3, nav4, nav5];
 
+const projectGallery = document.getElementById('project-gallery');
+const projectContents = document.querySelectorAll('.project-content');
+let arrayProjects = Array.from(projectContents);
+console.log(arrayProjects);
 let slideIndex  = 0;
+let currentIndex  = 0;
+let intervalID;
+
 
 const soundtrack = document.getElementById("background-music");
 
@@ -66,12 +73,38 @@ const toggleNav = () => {
   }
 };
 
+// Project Auto Gallery  Functions
+const showProject = (i) => {
+  arrayProjects[i].classList.add('visible');
+}
+
+function slideshowProject() {
+  intervalID = setInterval(() => {
+    arrayProjects[currentIndex].classList.remove('visible');
+    currentIndex = (currentIndex + 1) % arrayProjects.length;
+    showProject(currentIndex);
+  }, 2000);
+};
+
+// Function that stop the slideshow
+const stopSlideshow = () => {
+  clearInterval(intervalID);
+  console.log('dentro');
+};
+
 // Event Listeners
 menuBars.addEventListener('click', toggleNav);
 navItems.forEach((nav) => {
   nav.addEventListener('click', toggleNav);
 });
 
+projectGallery.addEventListener('mouseover', stopSlideshow);
+projectGallery.addEventListener('mouseout', ()=>{
+  console.log('fuori')
+  slideshowProject();
+});
+
 
 // On Load
 slider();
+slideshowProject();
