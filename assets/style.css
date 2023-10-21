@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   --primaryColor: #fff;
@@ -228,7 +228,8 @@ section {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--primaryColor);
-  font-family: 'Pacifico', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
 }
 /*
   #home {
@@ -341,7 +342,6 @@ section#home a {
   text-transform: lowercase;
   letter-spacing: 5px;
   font-family: 'Outfit', sans-serif;
-  font-size: 700;
 }
 
 /* Skills*/
@@ -440,8 +440,9 @@ section#projects {
   width: 80%;
   height: 20%;
   bottom: 0;
-  left: 15%;
-  
+  left: 10%;
+  font-size: 600;
+  font-family: 'Outfit', sans-serif;
 }
 
 
@@ -456,7 +457,7 @@ section#contact {
 
   section#home a {
     top: 1rem;
-    left: 15rem;
+    left: 1rem;
   }
 
   .menu-bars {
@@ -467,11 +468,11 @@ section#contact {
   /* About */
 
   #about .title-container {
-   margin-top: 50px;
+   margin-top: 20px;
   }
 
-  #about-title {
-   
+  #about #about-title {
+   font-size: small;
   }
 
   .about-container {
@@ -482,20 +483,21 @@ section#contact {
   .about-info-container {
     position: relative;
     width: 60%;
-    height: 400px;
+    height: 300px;
     padding: 0;
     overflow: auto;
+    margin-bottom: 20px;
   }
 
   .about-image-container {
     width: 70%;
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   }
 
   .about-image-container img{
-    width: 350px;
+    width: 300px;
     border-radius: 10px;
     
   }
@@ -554,7 +556,11 @@ section#contact {
   /* Projects */
 
   #projects{
-    max-height: 70vh;
+    max-height: 100vh;
+  }
+
+  #projects #skills-title {
+    font-size: small;
   }
 
   #projects .title-container {
@@ -563,8 +569,9 @@ section#contact {
   }
 
   #project-gallery{
-    height: 70%;
+    height: 80%;
     margin-bottom: 1rem;
+    width: 70%;
   }
 
   #project-gallery .project-content p{
